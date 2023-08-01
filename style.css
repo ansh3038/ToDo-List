@@ -37,18 +37,31 @@ body{
     color: red;
 }
 
+#taskbar{
+    overflow: scroll;
+    height: 300px;
+}
+#taskbar::-webkit-scrollbar{
+    display: none;
+}
 #tasks {
     display: grid;
     grid-template-columns: 1fr;
     gap: 14px;
+    /* overflow: scroll; */
+    /* height: 400px; */
+    
 }
 #tasks div {
     border: 3px solid #abcea1;
     background-color: #e2eede;
     border-radius: 6px;
+    /* height: fit-content; */
     padding: 5px;
     display: grid;
     gap: 4px;
+    overflow: hidden;
+    position: relative;
 }
 #tasks div .options {
     justify-self: center;
